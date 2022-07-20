@@ -51,7 +51,9 @@ Shreeyak Sajjan: shreeyak[dot]sajjan[at]gmail[dot]com
 
 ## Installation
 
-This code is tested with Ubuntu 16.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.3, and CUDA 9.0.  
+~~This code is tested with Ubuntu 16.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.3, and CUDA 9.0.~~ 
+This code is tested with Ubuntu 18.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) >= 1.3.
+- CUDA has not been tested yet
 
 ### System Dependencies
 
@@ -97,6 +99,7 @@ $ sudo apt-get install librealsense2-dbg
    ```bash
    pip install -r requirements.txt
    ```
+**`requirements.txt has been changed from the original repo to make it work**
    
 3. Download the data:  
    a) [Model Checkpoints](https://storage.googleapis.com/cleargrasp/cleargrasp-checkpoints.zip) (0.9GB) - Trained checkpoints of our 3 deeplabv3+ models.  
