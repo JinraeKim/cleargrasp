@@ -99,7 +99,7 @@ $ sudo apt-get install librealsense2-dbg
    ```bash
    pip install -r requirements.txt
    ```
-**`requirements.txt has been changed from the original repo to make it work**
+**`requirements.txt` has been changed from the original repo to make it work**
    
 3. Download the data:  
    a) [Model Checkpoints](https://storage.googleapis.com/cleargrasp/cleargrasp-checkpoints.zip) (0.9GB) - Trained checkpoints of our 3 deeplabv3+ models.  
