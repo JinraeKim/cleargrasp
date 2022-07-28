@@ -56,6 +56,12 @@ This code is tested with Ubuntu 18.04, Python3.6 and [Pytorch](https://pytorch.o
 - CUDA has not been tested yet
 
 ### System Dependencies
+#### Trouble shootings
+- I'm not sure I need to install the whole system dependencies below.
+In my case, I encountered an error to install `OpenEXR`,
+and `sudo apt install build-essential` resolved the problem.
+- I had to install [some stuff](sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev) to resolve
+the issue of ``GL/glu.h: No such file or directory #include <GL/glu.h>"
 
 ```bash
 sudo apt-get install libhdf5-10 libhdf5-serial-dev libhdf5-dev libhdf5-cpp-11
