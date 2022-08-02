@@ -5,21 +5,21 @@ captures_dir: '../data/captures'  # Captured images will be stored in this direc
 # Surface Normals Model
 normals:
   model: 'drn'  # Which model to use for inference. Possible values: ['unet', 'deeplab-resnet']
-  pathWeightsFile: '../data/cleargrasp/cleargrasp-checkpoints/surface_normals/checkpoint_normals.pth'  # Path to the checkpoint to be loaded
+  pathWeightsFile: '../data/cleargrasp-checkpoints/surface_normals/checkpoint_normals.pth'  # Path to the checkpoint to be loaded
   inferenceHeight: 256
   inferenceWidth: 256
 
 # Outlines Model
 outlines:
   model: 'drn'  # Which model to use for inference. Possible values: ['unet', 'deeplab_resnet']
-  pathWeightsFile: '../data/cleargrasp/cleargrasp-checkpoints/outlines/checkpoint_outlines.pth'  # Path to the checkpoint to be loaded
+  pathWeightsFile: '../data/cleargrasp-checkpoints/outlines/checkpoint_outlines.pth'  # Path to the checkpoint to be loaded
   inferenceHeight: 256
   inferenceWidth: 256
 
 # Segmentation Masks Model
 masks:
   model: 'drn' # Which model to use for inference. Possible values: ['deeplab_resnet']
-  pathWeightsFile: '../data/cleargrasp/cleargrasp-checkpoints/mask_segmentation/checkpoint_mask.pth'
+  pathWeightsFile: '../data/cleargrasp-checkpoints/mask_segmentation/checkpoint_mask.pth'
   inferenceHeight: 256
   inferenceWidth: 256
 
