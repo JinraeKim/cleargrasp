@@ -52,7 +52,7 @@ Shreeyak Sajjan: shreeyak[dot]sajjan[at]gmail[dot]com
 ## Installation
 
 ~~This code is tested with Ubuntu 16.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.3, and CUDA 9.0.~~ 
-This code is tested with Ubuntu 18.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) >= 1.3.
+This code is tested with Ubuntu 18.04 (and 20.04 as well), Python 3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.10.
 - CUDA has not been tested yet
 
 ### System Dependencies
