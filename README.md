@@ -187,7 +187,7 @@ We provide a script to run our full pipeline on a dataset and calculate accuracy
 ### 2. Live Demo
 
 We provide a demonstration of how to use our API on images streaming from realsense D400 series camera. Each new frame coming from the camera stream is passed through the depth completion module to obtain completed depth of transparent objects and the results are displayed in a window.  
-Resides in the folder `live-demo/`. This demo requires the Librealsense SDK to be installed.
+Resides in the folder `live-demo/`. **This demo requires the Librealsense SDK to be installed.** (Note: you should **build** it as shown [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md). If not, you would encounter an error when executing command `make`, e.g., `librealsense2/rs.hpp: No such file or directory`.)
 
 1. Create a copy of the sample config file:
 
