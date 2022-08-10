@@ -14,6 +14,13 @@ from imgaug import augmenters as iaa
 from . import utils
 from .modeling import deeplab, deeplab_masks
 
+# for temporary warnings
+import warnings
+
+
+def cuda_warn():
+   print("W [Jinrae Kim]: only cpu is available; fix this for cuda")
+
 
 class InferenceOutlines():
 
@@ -52,7 +59,9 @@ class InferenceOutlines():
         else:
             self.model.load_state_dict(checkpoint)
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        cuda_warn()
+        self.device = torch.device("cpu")
         self.model = self.model.to(self.device)
         self.model.eval()
 
@@ -171,7 +180,9 @@ class InferenceNormals():
         else:
             self.model.load_state_dict(checkpoint)
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        cuda_warn()
+        self.device = torch.device("cpu")
         self.model = self.model.to(self.device)
         self.model.eval()
 
@@ -306,7 +317,9 @@ class InferenceMasks():
             raise RuntimeError('Invalid Checkpoint. It does not contain "model_state_dict" in it:\n{}'.format(
                 checkpoint.keys()))
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        cuda_warn()
+        self.device = torch.device("cpu")
         self.model = self.model.to(self.device)
         self.model.eval()
 

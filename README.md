@@ -51,9 +51,17 @@ Shreeyak Sajjan: shreeyak[dot]sajjan[at]gmail[dot]com
 
 ## Installation
 
-This code is tested with Ubuntu 16.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.3, and CUDA 9.0.  
+~~This code is tested with Ubuntu 16.04, Python3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.3, and CUDA 9.0.~~ 
+This code is tested with Ubuntu 18.04 (and 20.04 as well), Python 3.6 and [Pytorch](https://pytorch.org/get-started/locally/) 1.10.
+- CUDA has not been tested yet
 
 ### System Dependencies
+#### Trouble shootings
+- I'm not sure I need to install the whole system dependencies below.
+In my case, I encountered an error to install `OpenEXR`,
+and `sudo apt install build-essential` resolved the problem.
+- I had to install [some stuff](sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev) to resolve
+the issue of ``GL/glu.h: No such file or directory #include <GL/glu.h>"
 
 ```bash
 sudo apt-get install libhdf5-10 libhdf5-serial-dev libhdf5-dev libhdf5-cpp-11
@@ -88,15 +96,13 @@ $ sudo apt-get install librealsense2-dbg
 
 1. Clone the repository. A small sample dataset of 3 real and 3 synthetic images is included.
 
-    ```bash
-    git clone git@github.com:Shreeyak/cleargrasp.git
-    ```
 
 2. Install pip dependencies by running in terminal:
 
    ```bash
    pip install -r requirements.txt
    ```
+**`requirements.txt` has been changed from the original repo to make it work**
    
 3. Download the data:  
    a) [Model Checkpoints](https://storage.googleapis.com/cleargrasp/cleargrasp-checkpoints.zip) (0.9GB) - Trained checkpoints of our 3 deeplabv3+ models.  
@@ -181,7 +187,7 @@ We provide a script to run our full pipeline on a dataset and calculate accuracy
 ### 2. Live Demo
 
 We provide a demonstration of how to use our API on images streaming from realsense D400 series camera. Each new frame coming from the camera stream is passed through the depth completion module to obtain completed depth of transparent objects and the results are displayed in a window.  
-Resides in the folder `live-demo/`. This demo requires the Librealsense SDK to be installed.
+Resides in the folder `live-demo/`. **This demo requires the Librealsense SDK to be installed.** (Note: you should **build** it as shown [here](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md). If not, you would encounter an error when executing command `make`, e.g., `librealsense2/rs.hpp: No such file or directory`.)
 
 1. Create a copy of the sample config file:
 
